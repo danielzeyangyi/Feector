@@ -24,7 +24,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback' // call back address after user ganted google OAuth permission
+      callbackURL: '/auth/google/callback', // call back address after user ganted google OAuth permission
+      proxy: true
     },
     async (accessToken, refreshToken, profile, done) => {
       // check if we have this user stored already
